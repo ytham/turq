@@ -7,7 +7,7 @@
         <!--NEARBY-->
         <scene sceneID="nVH-K0-MPc">
             <objects>
-                <tableViewController id="06w-4a-f3H" sceneMemberID="viewController">
+                <tableViewController id="06w-4a-f3H" customClass="NearbyViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gTH-jN-Qh5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-881"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Store-->
         <scene sceneID="U13-mt-Gml">
             <objects>
-                <collectionViewController id="xid-fK-HXc" sceneMemberID="viewController">
+                <collectionViewController title="Store" id="xid-fK-HXc" customClass="StoreViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="01H-v1-SLG">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1440" y="-881"/>
         </scene>
-        <!--View Controller-->
+        <!--Product-->
         <scene sceneID="hcm-uY-GWf">
             <objects>
-                <viewController id="oE0-LQ-itD" sceneMemberID="viewController">
+                <viewController title="Product" id="oE0-LQ-itD" customClass="ProductViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UXZ-j1-iJP"/>
                         <viewControllerLayoutGuide type="bottom" id="kgZ-cY-0ES"/>
@@ -96,12 +96,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DI5-Hw-qix" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="-881"/>
+            <point key="canvasLocation" x="2217" y="-475"/>
         </scene>
         <!--DEALS-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="DealsViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -109,31 +109,8 @@
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="195" y="279" width="209.5" height="41.5"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="192" y="329" width="215.5" height="17"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="DEALS" image="second" id="cPa-gy-q4n"/>
                 </viewController>
@@ -144,7 +121,7 @@
         <!--CART-->
         <scene sceneID="kPO-Vm-a9D">
             <objects>
-                <tableViewController id="5Vg-FA-QPI" sceneMemberID="viewController">
+                <tableViewController id="5Vg-FA-QPI" customClass="CartViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lyz-SW-9Wq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +153,7 @@
         <!--PROFILE-->
         <scene sceneID="1yb-PY-GTP">
             <objects>
-                <viewController id="Uvo-dA-QNX" sceneMemberID="viewController">
+                <viewController id="Uvo-dA-QNX" customClass="ProfileViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rbo-pm-4rg"/>
                         <viewControllerLayoutGuide type="bottom" id="4lJ-FU-A4k"/>
@@ -196,7 +173,7 @@
         <!--SEARCH-->
         <scene sceneID="NR2-5Z-yLN">
             <objects>
-                <collectionViewController id="XnZ-Bz-NjY" sceneMemberID="viewController">
+                <collectionViewController id="XnZ-Bz-NjY" customClass="SearchViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JRE-eB-CyS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,6 +195,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <connections>
+                                    <segue destination="oE0-LQ-itD" kind="show" id="oze-qd-klA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -258,4 +238,7 @@
     <resources>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oze-qd-klA"/>
+    </inferredMetricsTieBreakers>
 </document>
