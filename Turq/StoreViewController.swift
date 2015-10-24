@@ -11,9 +11,21 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class StoreViewController: UICollectionViewController {
+    
+    var stores: Array<YAKStores> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/")
+        
+        ref.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { snapshot in
+            // Update the array for tableView
+            
+            // Update the UI data fields
+            
+            // Update tableView
+        })
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
