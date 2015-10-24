@@ -1,5 +1,5 @@
 //
-//  YAKProductData.swift
+//  YAKProduct.swift
 //  Turq
 //
 //  Created by Yu Jiang Tham on 10/24/15.
@@ -8,17 +8,19 @@
 
 import Foundation
 
-class YAKProductData {
+class YAKProduct {
     
-    var imgUrl: String = ""
+    var img: String = ""
     var name: String = ""
-    var price: Double = 0.0
+    var category: String = ""
+    var price: String = ""
     var size: Character = "M"
-    var distance: Double = 0.0
+    var distance: String = ""
     
-    init(imgUrl: String, name: String, price: Double, size: Character, distance: Double) {
-        self.imgUrl = imgUrl
+    init(img: String, name: String, category: String, price: String, size: Character, distance: String) {
+        self.img = img
         self.name = name
+        self.category = category
         self.price = price
         self.size = size
         self.distance = distance

@@ -10,13 +10,13 @@ import Foundation
 
 class YAKStores {
     
-    var imgUrl: String = ""
+    var img: String = ""
     var name: String = ""
     var address: String = ""
-    var distance: Double = 0.0
+    var distance: String = ""
     
-    init(imgUrl: String, name: String, address: String, distance: Double) {
-        self.imgUrl = imgUrl
+    init(img: String, name: String, address: String, distance: String) {
+        self.img = img
         self.name = name
         self.address = address
         self.distance = distance

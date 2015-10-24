@@ -106,6 +106,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Turq"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

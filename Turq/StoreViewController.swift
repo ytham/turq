@@ -8,14 +8,19 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "StoreCell"
 
 class StoreViewController: UICollectionViewController {
     
-    var stores: Array<YAKStores> = []
+    var products: Array<YAKProduct> = []
+    var storeName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        self.title = self.storeName
+        
+        self.populateCollection()
         
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/")
         
@@ -35,6 +40,7 @@ class StoreViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -54,14 +60,13 @@ class StoreViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        NSLog("Product count: " + String(products.count))
+        return products.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -70,6 +75,10 @@ class StoreViewController: UICollectionViewController {
         // Configure the cell
     
         return cell
+    }
+    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
     }
 
     // MARK: UICollectionViewDelegate
@@ -102,5 +111,18 @@ class StoreViewController: UICollectionViewController {
     
     }
     */
+    
+    
+    // MARK: Debug functoins
+    
+    func populateCollection() {
+        let product1 = YAKProduct(img: "", name: "Shirt", category: "Shirt", price: "$85.00", size: "M", distance: "0.1mi")
+        let product2 = YAKProduct(img: "", name: "Blouse", category: "Shirt", price: "$25.00", size: "M", distance: "0.5mi")
+        let product3 = YAKProduct(img: "", name: "Pants", category: "Bottoms", price: "$135.00", size: "M", distance: "0.3mi")
+        
+        self.products.append(product1)
+        self.products.append(product2)
+        self.products.append(product3)
+    }
 
 }

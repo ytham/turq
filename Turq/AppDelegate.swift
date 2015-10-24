@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Goosemoose
+//  Turq
 //
 //  Created by Yu Jiang Tham on 10/24/15.
 //  Copyright © 2015 YAK. All rights reserved.

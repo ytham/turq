@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A43C3FD777939916FDFF9C15 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31EFD241A63729C58323297 /* libPods.a */; };
+		A653F26C1BDC3496001014B4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = A653F26B1BDC3496001014B4 /* Assets */; settings = {ASSET_TAGS = (); }; };
+		A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26D1BDC4E9A001014B4 /* YAKColors.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEB31BDBF07C000C8F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */; };
 		A6FFCEBA1BDBF07C000C8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEB81BDBF07C000C8F7B /* Main.storyboard */; };
 		A6FFCEBC1BDBF07C000C8F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */; };
@@ -21,7 +23,7 @@
 		A6FFCEEB1BDC00BB000C8F7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEA1BDC00BB000C8F7B /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEED1BDC18BF000C8F7B /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEE1BDC18FF000C8F7B /* ProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A6FFCEF11BDC1B42000C8F7B /* YAKProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */; settings = {ASSET_TAGS = (); }; };
+		A6FFCEF11BDC1B42000C8F7B /* YAKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEF01BDC1B42000C8F7B /* YAKProduct.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEF31BDC1D37000C8F7B /* YAKStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEF91BDC2034000C8F7B /* Stores.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEF81BDC2034000C8F7B /* Stores.plist */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEFC1BDC2064000C8F7B /* Products.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEFB1BDC2064000C8F7B /* Products.plist */; settings = {ASSET_TAGS = (); }; };
@@ -33,14 +35,14 @@
 			containerPortal = A6FFCEA71BDBF07B000C8F7B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A6FFCEAE1BDBF07B000C8F7B;
-			remoteInfo = Goosemoose;
+			remoteInfo = Turq;
 		};
 		A6FFCED11BDBF07C000C8F7B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6FFCEA71BDBF07B000C8F7B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A6FFCEAE1BDBF07B000C8F7B;
-			remoteInfo = Goosemoose;
+			remoteInfo = Turq;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -48,6 +50,8 @@
 		161615491642B0D1ED44A395 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B5243CC10E27B73DBE10267 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A653F2681BDC2762001014B4 /* Turq-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Turq-Bridging-Header.h"; sourceTree = "<group>"; };
+		A653F26B1BDC3496001014B4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
+		A653F26D1BDC4E9A001014B4 /* YAKColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKColors.swift; sourceTree = "<group>"; };
 		A6FFCEAF1BDBF07B000C8F7B /* Turq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FFCEB91BDBF07C000C8F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		A6FFCEEA1BDC00BB000C8F7B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		A6FFCEEE1BDC18FF000C8F7B /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKProductData.swift; sourceTree = "<group>"; };
+		A6FFCEF01BDC1B42000C8F7B /* YAKProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKProduct.swift; sourceTree = "<group>"; };
 		A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKStores.swift; sourceTree = "<group>"; };
 		A6FFCEF81BDC2034000C8F7B /* Stores.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Stores.plist; path = Data/Stores.plist; sourceTree = "<group>"; };
 		A6FFCEFB1BDC2064000C8F7B /* Products.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Products.plist; path = Data/Products.plist; sourceTree = "<group>"; };
@@ -143,8 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */,
+				A653F26D1BDC4E9A001014B4 /* YAKColors.swift */,
 				A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */,
-				A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */,
+				A6FFCEF01BDC1B42000C8F7B /* YAKProduct.swift */,
 				A6FFCEE21BDBFF57000C8F7B /* NearbyViewController.swift */,
 				A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */,
 				A6FFCEE41BDC0011000C8F7B /* SearchViewController.swift */,
@@ -156,6 +161,7 @@
 				A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */,
 				A6FFCEBD1BDBF07C000C8F7B /* LaunchScreen.storyboard */,
 				A6FFCEC01BDBF07C000C8F7B /* Info.plist */,
+				A653F26B1BDC3496001014B4 /* Assets */,
 				A6FFCEFA1BDC203B000C8F7B /* Data */,
 				A653F2681BDC2762001014B4 /* Turq-Bridging-Header.h */,
 			);
@@ -208,7 +214,7 @@
 			dependencies = (
 			);
 			name = Turq;
-			productName = Goosemoose;
+			productName = Turq;
 			productReference = A6FFCEAF1BDBF07B000C8F7B /* Turq.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -226,7 +232,7 @@
 				A6FFCEC71BDBF07C000C8F7B /* PBXTargetDependency */,
 			);
 			name = TurqTests;
-			productName = GoosemooseTests;
+			productName = TurqTests;
 			productReference = A6FFCEC51BDBF07C000C8F7B /* Turq.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -244,7 +250,7 @@
 				A6FFCED21BDBF07C000C8F7B /* PBXTargetDependency */,
 			);
 			name = TurqUITests;
-			productName = GoosemooseUITests;
+			productName = TurqUITests;
 			productReference = A6FFCED01BDBF07C000C8F7B /* Turq.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -297,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FFCEBF1BDBF07C000C8F7B /* LaunchScreen.storyboard in Resources */,
+				A653F26C1BDC3496001014B4 /* Assets in Resources */,
 				A6FFCEBC1BDBF07C000C8F7B /* Assets.xcassets in Resources */,
 				A6FFCEFC1BDC2064000C8F7B /* Products.plist in Resources */,
 				A6FFCEF91BDC2034000C8F7B /* Stores.plist in Resources */,
@@ -373,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */,
 				A6FFCEEB1BDC00BB000C8F7B /* ProfileViewController.swift in Sources */,
 				A6FFCEF31BDC1D37000C8F7B /* YAKStores.swift in Sources */,
 				A6FFCEE71BDC004D000C8F7B /* DealsViewController.swift in Sources */,
@@ -382,7 +390,7 @@
 				A6FFCEE31BDBFF57000C8F7B /* NearbyViewController.swift in Sources */,
 				A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */,
 				A6FFCEED1BDC18BF000C8F7B /* StoreViewController.swift in Sources */,
-				A6FFCEF11BDC1B42000C8F7B /* YAKProductData.swift in Sources */,
+				A6FFCEF11BDC1B42000C8F7B /* YAKProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Goosemoose/Info.plist;
+				INFOPLIST_FILE = Turq/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yak.Turq;
@@ -543,7 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Goosemoose/Info.plist;
+				INFOPLIST_FILE = Turq/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yak.Turq;
@@ -557,9 +565,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GoosemooseTests/Info.plist;
+				INFOPLIST_FILE = TurqTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yak.GoosemooseTests;
+				PRODUCT_BUNDLE_IDENTIFIER = yak.TurqTests;
 				PRODUCT_NAME = Turq;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turq.app/Turq";
 			};
@@ -569,9 +577,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GoosemooseTests/Info.plist;
+				INFOPLIST_FILE = TurqTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yak.GoosemooseTests;
+				PRODUCT_BUNDLE_IDENTIFIER = yak.TurqTests;
 				PRODUCT_NAME = Turq;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turq.app/Turq";
 			};
@@ -580,11 +588,11 @@
 		A6FFCEE01BDBF07C000C8F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = GoosemooseUITests/Info.plist;
+				INFOPLIST_FILE = TurqUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yak.GoosemooseUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = yak.TurqUITests;
 				PRODUCT_NAME = Turq;
-				TEST_TARGET_NAME = Goosemoose;
+				TEST_TARGET_NAME = Turq;
 				USES_XCTRUNNER = YES;
 			};
 			name = Debug;
@@ -592,11 +600,11 @@
 		A6FFCEE11BDBF07C000C8F7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = GoosemooseUITests/Info.plist;
+				INFOPLIST_FILE = TurqUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yak.GoosemooseUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = yak.TurqUITests;
 				PRODUCT_NAME = Turq;
-				TEST_TARGET_NAME = Goosemoose;
+				TEST_TARGET_NAME = Turq;
 				USES_XCTRUNNER = YES;
 			};
 			name = Release;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "SearchCell"
 
 class SearchViewController: UICollectionViewController {
 

@@ -10,19 +10,13 @@ import UIKit
 
 class NearbyViewController: UITableViewController {
     
-    var store1: YAKStores = YAKStores()
-    
-//    var subjects: Array<YAKStores> = []
-    var subjects: Array = ["A", "B", "C", "D", "E"]
+    var stores: Array = ["LOLAS", "MILLER'S HARDWARE", "GALLERIE GEMS", "LIGHT IT UP"]
+//    var selectedStore: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.title = "TURQ"
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,27 +33,37 @@ class NearbyViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return subjects.count
+        return stores.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("NearbyCell", forIndexPath: indexPath)
 
-        cell.textLabel!.text = subjects[indexPath.row] as String
+        let imageView = UIImageView(image: UIImage(named: "Assets/2. Nearby Screen/Campaign " + String(indexPath.row+1) + ".png"))
+        
+        cell.backgroundView = imageView
 
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 320
+    }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        performSegueWithIdentifier("NearbyTableView", sender: self)
+//        NSLog("Tapped " + String(indexPath.row))
+//        self.selectedStore = stores[indexPath.row]
+//        NSLog(self.selectedStore)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "NearbyTableView") {
             let vc = segue.destinationViewController as! StoreViewController
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                vc.storeName = self.stores[indexPath.row]
+            }
+
         }
     }
 
