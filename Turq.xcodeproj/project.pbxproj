@@ -20,6 +20,8 @@
 		A6FFCEEB1BDC00BB000C8F7B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEA1BDC00BB000C8F7B /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEED1BDC18BF000C8F7B /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEEE1BDC18FF000C8F7B /* ProductViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A6FFCEF11BDC1B42000C8F7B /* YAKProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */; settings = {ASSET_TAGS = (); }; };
+		A6FFCEF31BDC1D37000C8F7B /* YAKStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		A6FFCEEA1BDC00BB000C8F7B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		A6FFCEEE1BDC18FF000C8F7B /* ProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKProductData.swift; sourceTree = "<group>"; };
+		A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKStores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */,
+				A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */,
+				A6FFCEF01BDC1B42000C8F7B /* YAKProductData.swift */,
 				A6FFCEE21BDBFF57000C8F7B /* NearbyViewController.swift */,
 				A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */,
 				A6FFCEE41BDC0011000C8F7B /* SearchViewController.swift */,
@@ -274,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6FFCEEB1BDC00BB000C8F7B /* ProfileViewController.swift in Sources */,
+				A6FFCEF31BDC1D37000C8F7B /* YAKStores.swift in Sources */,
 				A6FFCEE71BDC004D000C8F7B /* DealsViewController.swift in Sources */,
 				A6FFCEE51BDC0011000C8F7B /* SearchViewController.swift in Sources */,
 				A6FFCEE91BDC00A0000C8F7B /* CartViewController.swift in Sources */,
@@ -281,6 +288,7 @@
 				A6FFCEE31BDBFF57000C8F7B /* NearbyViewController.swift in Sources */,
 				A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */,
 				A6FFCEED1BDC18BF000C8F7B /* StoreViewController.swift in Sources */,
+				A6FFCEF11BDC1B42000C8F7B /* YAKProductData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

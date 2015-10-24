@@ -10,7 +10,10 @@ import UIKit
 
 class NearbyViewController: UITableViewController {
     
-    var subjects = ["A", "B", "C", "D", "E"]
+    var store1: YAKStores = YAKStores()
+    
+//    var subjects: Array<YAKStores> = []
+    var subjects: Array = ["A", "B", "C", "D", "E"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +52,14 @@ class NearbyViewController: UITableViewController {
     }
     
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         performSegueWithIdentifier("NearbyTableView", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "NearbyTableView") {
-            var vc = segue.destinationViewController as 
+            let vc = segue.destinationViewController as! StoreViewController
         }
     }
 
