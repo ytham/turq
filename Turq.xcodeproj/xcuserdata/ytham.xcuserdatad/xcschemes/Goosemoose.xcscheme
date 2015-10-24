@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6FFCEAE1BDBF07B000C8F7B"
-               BuildableName = "Goosemoose.app"
-               BlueprintName = "Goosemoose"
-               ReferencedContainer = "container:Goosemoose.xcodeproj">
+               BuildableName = "Turq.app"
+               BlueprintName = "Turq"
+               ReferencedContainer = "container:Turq.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6FFCEC41BDBF07C000C8F7B"
-               BuildableName = "GoosemooseTests.xctest"
-               BlueprintName = "GoosemooseTests"
-               ReferencedContainer = "container:Goosemoose.xcodeproj">
+               BuildableName = "Turq.xctest"
+               BlueprintName = "TurqTests"
+               ReferencedContainer = "container:Turq.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A6FFCECF1BDBF07C000C8F7B"
-               BuildableName = "GoosemooseUITests.xctest"
-               BlueprintName = "GoosemooseUITests"
-               ReferencedContainer = "container:Goosemoose.xcodeproj">
+               BuildableName = "Turq.xctest"
+               BlueprintName = "TurqUITests"
+               ReferencedContainer = "container:Turq.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6FFCEAE1BDBF07B000C8F7B"
-            BuildableName = "Goosemoose.app"
-            BlueprintName = "Goosemoose"
-            ReferencedContainer = "container:Goosemoose.xcodeproj">
+            BuildableName = "Turq.app"
+            BlueprintName = "Turq"
+            ReferencedContainer = "container:Turq.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6FFCEAE1BDBF07B000C8F7B"
-            BuildableName = "Goosemoose.app"
-            BlueprintName = "Goosemoose"
-            ReferencedContainer = "container:Goosemoose.xcodeproj">
+            BuildableName = "Turq.app"
+            BlueprintName = "Turq"
+            ReferencedContainer = "container:Turq.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A6FFCEAE1BDBF07B000C8F7B"
-            BuildableName = "Goosemoose.app"
-            BlueprintName = "Goosemoose"
-            ReferencedContainer = "container:Goosemoose.xcodeproj">
+            BuildableName = "Turq.app"
+            BlueprintName = "Turq"
+            ReferencedContainer = "container:Turq.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
