@@ -116,6 +116,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         txtField.borderStyle = .RoundedRect
         txtField.font = UIFont(name: "HelveticaNeue", size: 16)
         reusableView!.addSubview(txtField)
+        txtField.text = "Rain"
         
         txtField.delegate = self
         txtField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
