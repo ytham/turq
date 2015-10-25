@@ -10,7 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    ///* ----- CAT environment
+    let kEnvironment = "CERT"
+    let kApiKey = "aF5Bs486EMUrdqQAk584DCUbm5v8ZmHQ" //replace this with your Payeezy API Key
+    let kApiSecret = "37c3a606ea32b2e43abab20aff2d49d60949351350bc9a4810df706a70dc22cc" //replace this with your Payeezy API Secret
+    let kMerchantToken = "fdoa-a480ce8951daa73262734cf102641994c1e55e7cdf4c02b6" //replace this with your Payeezy Token
+    
+    
+    let kApplePayMerchantId = "merchant.com.cert.PAA0D1" //replace with the merchantID assigned to this app on the Apple Developer Site
+    // ------------ */
     var window: UIWindow?
 
 
