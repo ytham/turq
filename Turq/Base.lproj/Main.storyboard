@@ -47,15 +47,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Ij-au-bcm">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="3Ij-au-bcm">
+                            <size key="itemSize" width="175" height="240"/>
+                            <size key="headerReferenceSize" width="0.0" height="40"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoreCell" id="NgG-Ti-suk">
-                                <rect key="frame" x="0.0" y="64" width="294" height="320"/>
+                                <rect key="frame" x="153" y="112" width="294" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="294" height="320"/>
@@ -70,6 +71,11 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3Fj-iS-RMP">
+                            <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="xid-fK-HXc" id="k7V-SI-VSq"/>
                             <outlet property="delegate" destination="xid-fK-HXc" id="0mH-aS-Nlg"/>
@@ -213,10 +219,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-200"/>
         </scene>
-        <!--TURQ-->
+        <!--NEARBY-->
         <scene sceneID="tkR-L7-X8S">
             <objects>
-                <navigationController title="TURQ" id="tfW-1f-LAr" sceneMemberID="viewController">
+                <navigationController title="NEARBY" id="tfW-1f-LAr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="i5C-Qs-5Me">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -233,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="-681" y="0.0"/>
         </scene>
-        <!--TURQ-->
+        <!--NEARBY-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController title="TURQ" id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="NEARBY" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="TURQ" id="xeX-nq-MOe"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">

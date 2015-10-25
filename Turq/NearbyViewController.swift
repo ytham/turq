@@ -11,7 +11,6 @@ import UIKit
 class NearbyViewController: UITableViewController {
     
     var stores: Array = ["LOLAS", "MILLER'S HARDWARE", "GALLERIE GEMS", "LIGHT IT UP"]
-//    var selectedStore: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +26,10 @@ class NearbyViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return stores.count
     }
 

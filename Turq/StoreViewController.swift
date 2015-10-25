@@ -26,6 +26,7 @@ class StoreViewController: UICollectionViewController {
         
         ref.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { snapshot in
             // Update the array for tableView
+            print(snapshot)
             
             // Update the UI data fields
             
@@ -47,15 +48,14 @@ class StoreViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }
-    */
+
 
     // MARK: UICollectionViewDataSource
 
@@ -71,8 +71,18 @@ class StoreViewController: UICollectionViewController {
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
-    
-        // Configure the cell
+        
+//        let imageView = UIImageView(image: UIImage(named: "Assets/2. Nearby Screen/Campaign " + String(indexPath.row+1) + ".png"))
+//    
+//        cell.backgroundView = imageView
+        cell.layer.cornerRadius = 3.0
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor.blackColor().CGColor
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.shadowOffset = CGSizeMake(2.0, 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        
     
         return cell
     }
@@ -81,6 +91,7 @@ class StoreViewController: UICollectionViewController {
         
     }
 
+    
     // MARK: UICollectionViewDelegate
 
     /*
