@@ -26,6 +26,8 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = self.product!.name
+        
         let url = NSURL(string: self.product!.img)!
         let data = NSData(contentsOfURL: url)
         let image = UIImage(data: data!)
@@ -33,6 +35,8 @@ class ProductViewController: UIViewController {
         self.name.text = self.product!.name
         self.price.text = self.product!.price
         let distance = self.product!.distance
+        distanceAndAddress.text = "Item is \(distance) mi away"
+        
         // Need to add address
         
         sizeXS.layer.borderColor = UIColor.darkGrayColor().CGColor
