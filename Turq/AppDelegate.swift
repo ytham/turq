@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let kApiKey = "aF5Bs486EMUrdqQAk584DCUbm5v8ZmHQ" //replace this with your Payeezy API Key
     let kApiSecret = "37c3a606ea32b2e43abab20aff2d49d60949351350bc9a4810df706a70dc22cc" //replace this with your Payeezy API Secret
     let kMerchantToken = "fdoa-a480ce8951daa73262734cf102641994c1e55e7cdf4c02b6" //replace this with your Payeezy Token
-    
+    var pePaymentProcessor = FDInAppPaymentProcessor()
     
     let kApplePayMerchantId = "merchant.com.cert.PAA0D1" //replace with the merchantID assigned to this app on the Apple Developer Site
     // ------------ */
@@ -24,6 +24,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+//        self.pePaymentProcessor = [[FDInAppPaymentProcessor alloc] initWithApiKey:kApiKey
+//            apiSecret:kApiSecret
+//            merchantToken:kMerchantToken
+//            merchantIdentifier:kApplePayMerchantId
+//            environment:kEnvironment];
+//        
+        // The app can choose which mode to send transactions: pre-auth only or purchase
+        // You can set the default here
+//        self.pePaymentProcessor.paymentMode = FDPreAuthorization; //FDPurchase; //FDPreAuthorization;
+        
+        self.pePaymentProcessor = FDInAppPaymentProcessor.init(apiKey: kApiKey, apiSecret: kApiSecret, merchantToken: kMerchantToken, merchantIdentifier: kApplePayMerchantId, environment: kEnvironment)
+        self.pePaymentProcessor.paymentMode = FDPreAuthorization
         return true
     }
 
