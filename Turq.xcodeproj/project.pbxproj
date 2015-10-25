@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D4797901C3747AD97AF5A4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAD0E70C2A549F0A1CD1D5E /* libPods.a */; };
+		A613FB481BDC84DF00681DD3 /* YAKProductGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F26C1BDC3496001014B4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = A653F26B1BDC3496001014B4 /* Assets */; settings = {ASSET_TAGS = (); }; };
 		A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26D1BDC4E9A001014B4 /* YAKColors.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F2701BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
@@ -52,6 +53,7 @@
 		161615491642B0D1ED44A395 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2AAD0E70C2A549F0A1CD1D5E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5243CC10E27B73DBE10267 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKProductGetter.swift; sourceTree = "<group>"; };
 		A653F2681BDC2762001014B4 /* Turq-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Turq-Bridging-Header.h"; sourceTree = "<group>"; };
 		A653F26B1BDC3496001014B4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
 		A653F26D1BDC4E9A001014B4 /* YAKColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKColors.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				A653F26D1BDC4E9A001014B4 /* YAKColors.swift */,
 				A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */,
 				A6FFCEF01BDC1B42000C8F7B /* YAKProduct.swift */,
+				A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */,
 				A6FFCEE21BDBFF57000C8F7B /* NearbyViewController.swift */,
 				A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */,
 				A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */,
@@ -394,6 +397,7 @@
 				A653F2701BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift in Sources */,
 				A653F2721BDC5A8D001014B4 /* ProductCollectionViewCell.swift in Sources */,
 				A6FFCEE91BDC00A0000C8F7B /* CartViewController.swift in Sources */,
+				A613FB481BDC84DF00681DD3 /* YAKProductGetter.swift in Sources */,
 				A6FFCEB31BDBF07C000C8F7B /* AppDelegate.swift in Sources */,
 				A6FFCEE31BDBFF57000C8F7B /* NearbyViewController.swift in Sources */,
 				A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */,

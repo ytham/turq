@@ -10,6 +10,19 @@ import UIKit
 
 class ProductCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var price: UILabel!
     
+    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+    }
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
     
 }

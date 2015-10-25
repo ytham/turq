@@ -21,45 +21,18 @@ class StoreViewController: UICollectionViewController {
     
         self.title = self.storeName
         
-//        self.populateCollection()
-        
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
         
         ref.observeEventType(FEventType.Value, withBlock: { snapshot in
-            self.products = []
-            
             // Update the array for tableView
-            for shop in snapshot.children {
-                let shopSnap = shop as! FDataSnapshot
-                for product in shopSnap.children {
-                    let productSnap = product as! FDataSnapshot
-                    let data = productSnap.value
-                    
-                    let yakProduct = YAKProduct()
-                    yakProduct.img = data.objectForKey("img") as! String
-                    yakProduct.name = data.objectForKey("name") as! String
-                    yakProduct.category = data.objectForKey("category") as! String
-                    yakProduct.company = data.objectForKey("company") as! String
-                    yakProduct.distance = data.objectForKey("distance") as! String
-                    yakProduct.size = data.objectForKey("size") as! String
-                    yakProduct.price = data.objectForKey("price") as! String
-                    
-                    self.products.append(yakProduct)
-                }
-            }
-            // Update the UI data fields
+            self.products = YAKProductGetter.convertSnapshotToProductArray(snapshot)
             
-            // Update tableView
+            // Update collectionView
             self.collectionView!.reloadData()
         })
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+//        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
 
@@ -74,6 +47,13 @@ class StoreViewController: UICollectionViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "StoreCollectionView") {
+            let vc = segue.destinationViewController as! ProductViewController
+            if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
+                vc.product = self.products[indexPath.row]
+            }
+        }
+        
     }
 
 
@@ -90,20 +70,32 @@ class StoreViewController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
+        
+        let yakProduct = products[indexPath.row] as YAKProduct
+        print(yakProduct.img)
+        let url = NSURL(string: yakProduct.img)!
+        let data = NSData(contentsOfURL: url)
+        let image = UIImage(data: data!)
+        print(image?.description)
+//        cell.backgroundView = UIImageView(image: image)
+        cell.img.image = image!
+        cell.name.text = yakProduct.name
+        cell.price.text = yakProduct.price
+        
         
 //        let imageView = UIImageView(image: UIImage(named: "Assets/2. Nearby Screen/Campaign " + String(indexPath.row+1) + ".png"))
 //    
 //        cell.backgroundView = imageView
-        cell.layer.cornerRadius = 3.0
+        cell.layer.cornerRadius = 8.0
         cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.blackColor().CGColor
+        cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
+        cell.layer.backgroundColor = UIColor.whiteColor().CGColor
         cell.layer.shadowColor = UIColor.blackColor().CGColor
-        cell.layer.shadowOffset = CGSizeMake(2.0, 2.0)
+        cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
         cell.layer.shadowRadius = 2.0
-        cell.layer.shadowOpacity = 1.0
+        cell.layer.shadowOpacity = 0.25
         
-    
         return cell
     }
     
