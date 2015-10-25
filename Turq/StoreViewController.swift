@@ -20,6 +20,11 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
         
         self.title = self.storeName
         
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Assets/TOP1.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: YAKColors.turquoise]
+        
+        self.collectionView!.backgroundView = UIImageView(image: UIImage(named: "Assets/BackgroundFINAL.png"))
+        
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
         
         ref.observeEventType(FEventType.Value, withBlock: { snapshot in
@@ -104,12 +109,11 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
     override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         var reusableView: UICollectionReusableView? = nil
         
-        
         reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
         
-        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 350, height: 30.00));
+        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 358, height: 30.00));
         txtField.borderStyle = .RoundedRect
-        txtField.font = UIFont(name: "HelveticaNeue", size:  16   )
+        txtField.font = UIFont(name: "HelveticaNeue", size: 16)
         reusableView!.addSubview(txtField)
         
         txtField.delegate = self

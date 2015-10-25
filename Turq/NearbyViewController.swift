@@ -16,6 +16,10 @@ class NearbyViewController: UITableViewController, FDPaymentAuthorizationViewCon
         super.viewDidLoad()
         
         self.title = "TURQ"
+        
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Assets/TOP1.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: YAKColors.turquoise]
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +65,21 @@ class NearbyViewController: UITableViewController, FDPaymentAuthorizationViewCon
                 vc.storeName = self.stores[indexPath.row]
             }
         }
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40.0
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRectMake(0, 0, 400, 40))
+        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 5, width: 358, height: 30.00));
+        txtField.borderStyle = .RoundedRect
+        txtField.font = UIFont(name: "HelveticaNeue", size: 16)
+        txtField.text = "Current Location"
+        txtField.textColor = YAKColors.turquoise
+        view.addSubview(txtField)
+        return view
     }
     
     //MARK: FDPaymentAuthorizationViewControllerDelegate

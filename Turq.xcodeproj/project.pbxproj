@@ -19,6 +19,7 @@
 		A65F68B11BDD11B2007B7DD5 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F68B01BDD11B2007B7DD5 /* SearchCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		A65F68B41BDD343A007B7DD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A65F68B31BDD343A007B7DD5 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A65F68B61BDD377B007B7DD5 /* ApplePayButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F68B51BDD377B007B7DD5 /* ApplePayButtonViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A65F68B81BDD3BE7007B7DD5 /* TurqNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F68B71BDD3BE7007B7DD5 /* TurqNavigationBar.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEB31BDBF07C000C8F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */; };
 		A6FFCEBA1BDBF07C000C8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEB81BDBF07C000C8F7B /* Main.storyboard */; };
 		A6FFCEBC1BDBF07C000C8F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */; };
@@ -72,6 +73,7 @@
 		A65F68B21BDD343A007B7DD5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A65F68B31BDD343A007B7DD5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A65F68B51BDD377B007B7DD5 /* ApplePayButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplePayButtonViewController.swift; sourceTree = "<group>"; };
+		A65F68B71BDD3BE7007B7DD5 /* TurqNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurqNavigationBar.swift; sourceTree = "<group>"; };
 		A6FFCEAF1BDBF07B000C8F7B /* Turq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FFCEB91BDBF07C000C8F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */,
 				A6FFCEF01BDC1B42000C8F7B /* YAKProduct.swift */,
 				A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */,
+				A65F68B71BDD3BE7007B7DD5 /* TurqNavigationBar.swift */,
 				A6FFCEE21BDBFF57000C8F7B /* NearbyViewController.swift */,
 				A6FFCEEC1BDC18BF000C8F7B /* StoreViewController.swift */,
 				A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */,
@@ -424,6 +427,7 @@
 				A613FB481BDC84DF00681DD3 /* YAKProductGetter.swift in Sources */,
 				A6FFCEB31BDBF07C000C8F7B /* AppDelegate.swift in Sources */,
 				A65F68B41BDD343A007B7DD5 /* ViewController.m in Sources */,
+				A65F68B81BDD3BE7007B7DD5 /* TurqNavigationBar.swift in Sources */,
 				A65F68B61BDD377B007B7DD5 /* ApplePayButtonViewController.swift in Sources */,
 				A6FFCEE31BDBFF57000C8F7B /* NearbyViewController.swift in Sources */,
 				A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */,

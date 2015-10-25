@@ -27,7 +27,7 @@
         <scene sceneID="nVH-K0-MPc">
             <objects>
                 <tableViewController id="06w-4a-f3H" customClass="NearbyViewController" customModule="Turq" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="450" sectionHeaderHeight="18" sectionFooterHeight="18" id="gTH-jN-Qh5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="450" sectionHeaderHeight="50" sectionFooterHeight="1" id="gTH-jN-Qh5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>

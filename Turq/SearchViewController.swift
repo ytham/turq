@@ -18,6 +18,9 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "Assets/TOP1.png"), forBarMetrics: .Default)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: YAKColors.turquoise]
+        
         self.collectionView!.backgroundView = UIImageView(image: UIImage(named: "Assets/BackgroundFINAL.png"))
 
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
