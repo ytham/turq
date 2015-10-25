@@ -60,6 +60,15 @@
     self.pePaymentProcessor.paymentMode = FDPreAuthorization; //FDPurchase; //FDPreAuthorization;
     
     
+    UIButton *Btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [Btn setFrame:CGRectMake(0, 0, 150, 30)];
+    [Btn setBackgroundImage:[UIImage imageNamed:@"Assets/5. Cart Page/ApplePayBTN_32pt__black_logo_@2x.png"] forState:UIControlStateNormal];
+    [Btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [Btn setFont:[UIFont fontWithName:@"Helvetica" size:14.0]];
+    [Btn addTarget:self action:@selector(ButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:Btn];
+    
+    
     
 }
 
