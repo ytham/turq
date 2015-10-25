@@ -77,12 +77,17 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         cell.backgroundView = UIImageView(image: image)
 //        cell.img.image = image!
         cell.name.text = yakProduct.name
+        cell.name.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.name.layer.shadowOffset = CGSizeMake(0.0, 1.0)
+        cell.name.layer.shadowRadius = 1.0
+        cell.name.layer.shadowOpacity = 1.0
+        
         cell.price.text = yakProduct.price
         cell.price.backgroundColor = YAKColors.priceBG
         
-//        cell.layer.cornerRadius = 8.0
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
+        cell.layer.cornerRadius = 4.0
+//        cell.layer.borderWidth = 1.0
+//        cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
         cell.layer.backgroundColor = UIColor.whiteColor().CGColor
         cell.layer.shadowColor = UIColor.blackColor().CGColor
         cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
@@ -111,7 +116,12 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
     }
     
     func textFieldDidChange(textField: UITextField) {
-        let filterText = textField.text
+        self.filteredProducts = self.products.filter() { (product: YAKProduct) -> Bool in
+            let match = product.name.lowercaseString.rangeOfString(textField.text!.lowercaseString)
+            return match != nil ? true : false
+//            contains(($0 as YAKProduct).name, textField.text!)
+        }
+        let filterText = textField.text!
         print(filterText)
         
     }

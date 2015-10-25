@@ -60,10 +60,6 @@ class NearbyViewController: UITableViewController, FDPaymentAuthorizationViewCon
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 vc.storeName = self.stores[indexPath.row]
             }
-<<<<<<< HEAD
-=======
-            
->>>>>>> 8fa57d45a75a62e0971f9a2e4c5dbe2d114c0d00
         }
     }
     
