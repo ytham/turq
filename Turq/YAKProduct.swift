@@ -12,14 +12,20 @@ class YAKProduct {
     
     var img: String = ""
     var name: String = ""
+    var company: String = ""
     var category: String = ""
     var price: String = ""
-    var size: Character = "M"
+    var size: String = ""
     var distance: String = ""
     
-    init(img: String, name: String, category: String, price: String, size: Character, distance: String) {
+    init() {
+        
+    }
+    
+    init(img: String, name: String, company: String, category: String, price: String, size: String, distance: String) {
         self.img = img
         self.name = name
+        self.company = company
         self.category = category
         self.price = price
         self.size = size
