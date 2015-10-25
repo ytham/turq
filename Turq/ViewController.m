@@ -47,6 +47,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.appleLogo = (unichar) strtol([@"0xf8ff" UTF8String], NULL, 16);
+
     
     self.pePaymentProcessor = [[FDInAppPaymentProcessor alloc] initWithApiKey:kApiKey
                                                                     apiSecret:kApiSecret

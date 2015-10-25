@@ -26,8 +26,13 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
             // Update the array for tableView
             self.products = YAKProductGetter.convertSnapshotToProductArray(snapshot, collectionView: self.collectionView!)
             
+            for (var i = self.products.count-1; i <= 0; i--) {
+                self.filteredProducts.append(self.products[i])
+            }
+//            self.filteredProducts = self.products
+            
             // Update collectionView
-//            self.collectionView!.reloadData()
+            self.collectionView!.reloadData()
         })
         
         // Register cell classes
@@ -48,7 +53,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         if (segue.identifier == "SearchCollectionView") {
             let vc = segue.destinationViewController as! ProductViewController
             if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
-                vc.product = self.products[indexPath.row]
+                vc.product = self.filteredProducts[indexPath.row]
             }
         }
     }
@@ -62,13 +67,13 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         NSLog("Product count: " + String(products.count))
-        return self.products.count
+        return self.filteredProducts.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
         
-        let yakProduct = products[indexPath.row] as YAKProduct
+        let yakProduct = self.filteredProducts[indexPath.row] as YAKProduct
         print(yakProduct.img)
         let url = NSURL(string: yakProduct.img)!
         let data = NSData(contentsOfURL: url)
@@ -104,7 +109,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         
         reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SearchHeader", forIndexPath: indexPath)
         
-        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 350, height: 30.00));
+        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 360, height: 30.00));
         txtField.borderStyle = .RoundedRect
         txtField.font = UIFont(name: "HelveticaNeue", size: 16)
         reusableView!.addSubview(txtField)
@@ -116,14 +121,13 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
     }
     
     func textFieldDidChange(textField: UITextField) {
-        self.filteredProducts = self.products.filter() { (product: YAKProduct) -> Bool in
-            let match = product.name.lowercaseString.rangeOfString(textField.text!.lowercaseString)
-            return match != nil ? true : false
-//            contains(($0 as YAKProduct).name, textField.text!)
-        }
         let filterText = textField.text!
         print(filterText)
-        
+        self.filteredProducts = self.products.filter() { (product: YAKProduct) -> Bool in
+            let match = product.name.rangeOfString(filterText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return match != nil ? true : false
+        }
+        self.collectionView!.reloadData()
     }
     
     

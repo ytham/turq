@@ -26,6 +26,8 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = self.product!.name
+        
         let url = NSURL(string: self.product!.img)!
         let data = NSData(contentsOfURL: url)
         let image = UIImage(data: data!)
