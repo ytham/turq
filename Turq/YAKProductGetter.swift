@@ -11,7 +11,7 @@ import UIKit
 
 class YAKProductGetter {
     
-    class func convertSnapshotToProductArray(snapshot: FDataSnapshot) -> Array<YAKProduct> {
+    class func convertSnapshotToProductArray(snapshot: FDataSnapshot, collectionView: UICollectionView) -> Array<YAKProduct> {
         var products: Array<YAKProduct> = []
         
         // Update the array for tableView
@@ -31,6 +31,7 @@ class YAKProductGetter {
                 yakProduct.price = data.objectForKey("price") as! String
                 
                 products.append(yakProduct)
+                collectionView.reloadData()
             }
         }
         

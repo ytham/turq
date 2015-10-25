@@ -60,7 +60,6 @@ class NearbyViewController: UITableViewController {
             if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 vc.storeName = self.stores[indexPath.row]
             }
-
         }
     }
 

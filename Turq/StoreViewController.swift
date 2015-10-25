@@ -7,43 +7,43 @@
 //
 
 import UIKit
-//import SwiftyJSON
 
 private let reuseIdentifier = "StoreCell"
-
-class StoreViewController: UICollectionViewController {
+class StoreViewController: UICollectionViewController, UITextFieldDelegate {
     
     var products: Array<YAKProduct> = []
+    var filteredProducts: Array<YAKProduct> = []
     var storeName: String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         self.title = self.storeName
         
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
         
         ref.observeEventType(FEventType.Value, withBlock: { snapshot in
             // Update the array for tableView
-            self.products = YAKProductGetter.convertSnapshotToProductArray(snapshot)
+            self.products = YAKProductGetter.convertSnapshotToProductArray(snapshot, collectionView: self.collectionView!)
             
+            self.filteredProducts = []
             // Update collectionView
-            self.collectionView!.reloadData()
+//            self.collectionView!.reloadData()
         })
 
         // Register cell classes
 //        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     // MARK: - Navigation
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
@@ -53,22 +53,21 @@ class StoreViewController: UICollectionViewController {
                 vc.product = self.products[indexPath.row]
             }
         }
-        
     }
-
-
+    
+    
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
+    
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         NSLog("Product count: " + String(products.count))
-        return products.count
+        return self.products.count
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
@@ -82,11 +81,7 @@ class StoreViewController: UICollectionViewController {
         cell.img.image = image!
         cell.name.text = yakProduct.name
         cell.price.text = yakProduct.price
-        
-        
-//        let imageView = UIImageView(image: UIImage(named: "Assets/2. Nearby Screen/Campaign " + String(indexPath.row+1) + ".png"))
-//    
-//        cell.backgroundView = imageView
+      
         cell.layer.cornerRadius = 8.0
         cell.layer.borderWidth = 1.0
         cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
@@ -101,35 +96,61 @@ class StoreViewController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
+        
     }
-
+    
     
     // MARK: UICollectionViewDelegate
+    override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        var reusableView: UICollectionReusableView? = nil
+        
+        
+        reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
+        
+        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 350, height: 30.00));
+        txtField.borderStyle = .RoundedRect
+        txtField.font = UIFont(name: "HelveticaNeue", size:  16   )
+        reusableView!.addSubview(txtField)
+        
+        txtField.delegate = self
+        txtField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        
+        
+        return reusableView!
+    }
+    
+    func textFieldDidChange(textField: UITextField) {
+        let filterText = textField.text
+        print(filterText)
+        
+    }
+
+
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    return true
     }
     */
-
+    
     /*
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    return true
     }
     */
-
+    
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
+    return false
     }
-
+    
     override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
+    return false
     }
-
+    
     override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
     
     }
@@ -147,5 +168,5 @@ class StoreViewController: UICollectionViewController {
         self.products.append(product2)
         self.products.append(product3)
     }
-
+    
 }

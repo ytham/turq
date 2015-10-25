@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6D4797901C3747AD97AF5A4C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAD0E70C2A549F0A1CD1D5E /* libPods.a */; };
+		72C4500F1BDCABFF00A3F5D4 /* InAppSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4500D1BDCABFF00A3F5D4 /* InAppSDK.framework */; settings = {ASSET_TAGS = (); }; };
+		72C450101BDCABFF00A3F5D4 /* PayeezyClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4500E1BDCABFF00A3F5D4 /* PayeezyClient.framework */; settings = {ASSET_TAGS = (); }; };
+		72C450121BDCAD5B00A3F5D4 /* AppleUKTester.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 72C450111BDCAD5B00A3F5D4 /* AppleUKTester.entitlements */; settings = {ASSET_TAGS = (); }; };
 		A613FB481BDC84DF00681DD3 /* YAKProductGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F26C1BDC3496001014B4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = A653F26B1BDC3496001014B4 /* Assets */; settings = {ASSET_TAGS = (); }; };
 		A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26D1BDC4E9A001014B4 /* YAKColors.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F2701BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F2721BDC5A8D001014B4 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F2711BDC5A8D001014B4 /* ProductCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		A65F68B11BDD11B2007B7DD5 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65F68B01BDD11B2007B7DD5 /* SearchCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		A6FFCEB31BDBF07C000C8F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */; };
 		A6FFCEBA1BDBF07C000C8F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEB81BDBF07C000C8F7B /* Main.storyboard */; };
 		A6FFCEBC1BDBF07C000C8F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */; };
@@ -52,6 +56,9 @@
 /* Begin PBXFileReference section */
 		161615491642B0D1ED44A395 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2AAD0E70C2A549F0A1CD1D5E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C4500D1BDCABFF00A3F5D4 /* InAppSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InAppSDK.framework; sourceTree = "<group>"; };
+		72C4500E1BDCABFF00A3F5D4 /* PayeezyClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayeezyClient.framework; sourceTree = "<group>"; };
+		72C450111BDCAD5B00A3F5D4 /* AppleUKTester.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppleUKTester.entitlements; sourceTree = "<group>"; };
 		8B5243CC10E27B73DBE10267 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A613FB471BDC84DF00681DD3 /* YAKProductGetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKProductGetter.swift; sourceTree = "<group>"; };
 		A653F2681BDC2762001014B4 /* Turq-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Turq-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -59,6 +66,7 @@
 		A653F26D1BDC4E9A001014B4 /* YAKColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YAKColors.swift; sourceTree = "<group>"; };
 		A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
 		A653F2711BDC5A8D001014B4 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		A65F68B01BDD11B2007B7DD5 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		A6FFCEAF1BDBF07B000C8F7B /* Turq.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turq.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6FFCEB91BDBF07C000C8F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C4500F1BDCABFF00A3F5D4 /* InAppSDK.framework in Frameworks */,
+				72C450101BDCABFF00A3F5D4 /* PayeezyClient.framework in Frameworks */,
 				6D4797901C3747AD97AF5A4C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +132,8 @@
 		4FFBEDA3338C3FF82932DBE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72C4500D1BDCABFF00A3F5D4 /* InAppSDK.framework */,
+				72C4500E1BDCABFF00A3F5D4 /* PayeezyClient.framework */,
 				2AAD0E70C2A549F0A1CD1D5E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -130,6 +142,7 @@
 		A6FFCEA61BDBF07B000C8F7B = {
 			isa = PBXGroup;
 			children = (
+				72C450111BDCAD5B00A3F5D4 /* AppleUKTester.entitlements */,
 				A6FFCEB11BDBF07B000C8F7B /* Turq */,
 				A6FFCEC81BDBF07C000C8F7B /* TurqTests */,
 				A6FFCED31BDBF07C000C8F7B /* TurqUITests */,
@@ -166,9 +179,10 @@
 				A6FFCEE81BDC00A0000C8F7B /* CartViewController.swift */,
 				A6FFCEEA1BDC00BB000C8F7B /* ProfileViewController.swift */,
 				A6FFCEB81BDBF07C000C8F7B /* Main.storyboard */,
-				A653F2711BDC5A8D001014B4 /* ProductCollectionViewCell.swift */,
-				A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */,
 				A6FFCEBD1BDBF07C000C8F7B /* LaunchScreen.storyboard */,
+				A653F2711BDC5A8D001014B4 /* ProductCollectionViewCell.swift */,
+				A65F68B01BDD11B2007B7DD5 /* SearchCollectionViewCell.swift */,
+				A6FFCEBB1BDBF07C000C8F7B /* Assets.xcassets */,
 				A6FFCEC01BDBF07C000C8F7B /* Info.plist */,
 				A653F26B1BDC3496001014B4 /* Assets */,
 				A6FFCEFA1BDC203B000C8F7B /* Data */,
@@ -275,6 +289,7 @@
 				TargetAttributes = {
 					A6FFCEAE1BDBF07B000C8F7B = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = Q2WYS66X7Y;
 					};
 					A6FFCEC41BDBF07C000C8F7B = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -311,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C450121BDCAD5B00A3F5D4 /* AppleUKTester.entitlements in Resources */,
 				A6FFCEBF1BDBF07C000C8F7B /* LaunchScreen.storyboard in Resources */,
 				A653F26C1BDC3496001014B4 /* Assets in Resources */,
 				A6FFCEBC1BDBF07C000C8F7B /* Assets.xcassets in Resources */,
@@ -403,6 +419,7 @@
 				A6FFCEEF1BDC18FF000C8F7B /* ProductViewController.swift in Sources */,
 				A6FFCEED1BDC18BF000C8F7B /* StoreViewController.swift in Sources */,
 				A6FFCEF11BDC1B42000C8F7B /* YAKProduct.swift in Sources */,
+				A65F68B11BDD11B2007B7DD5 /* SearchCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +563,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Turq/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -563,6 +585,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Turq/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

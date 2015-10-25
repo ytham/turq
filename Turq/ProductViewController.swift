@@ -34,6 +34,21 @@ class ProductViewController: UIViewController {
         self.price.text = self.product!.price
         let distance = self.product!.distance
         // Need to add address
+        
+        sizeXS.layer.borderColor = UIColor.darkGrayColor().CGColor
+        sizeXS.layer.borderWidth = 1
+        sizeS.layer.borderColor = UIColor.darkGrayColor().CGColor
+        sizeS.layer.borderWidth = 1
+        
+        sizeM.layer.cornerRadius = 25
+        sizeM.backgroundColor = UIColor.whiteColor()
+        sizeM.textColor = UIColor.blackColor()
+        
+        sizeL.layer.borderColor = UIColor.darkGrayColor().CGColor
+        sizeL.layer.borderWidth = 1
+        sizeXL.layer.borderColor = UIColor.darkGrayColor().CGColor
+        sizeXL.layer.borderWidth = 1
+        
 
         // Do any additional setup after loading the view.
     }
