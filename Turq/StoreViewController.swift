@@ -21,27 +21,36 @@ class StoreViewController: UICollectionViewController {
     
         self.title = self.storeName
         
-        self.populateCollection()
-        
-//        var item1: Dictionary     =  ["name": "Alan Turning", "item" : "Red Chair", "price": "100"]
-//        print(item1)
+//        self.populateCollection()
         
         let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
         
         ref.observeEventType(FEventType.Value, withBlock: { snapshot in
+            self.products = []
+            
             // Update the array for tableView
             for shop in snapshot.children {
-                let shopItems = shop as! FDataSnapshot
-                for product in shopItems.children {
+                let shopSnap = shop as! FDataSnapshot
+                for product in shopSnap.children {
                     let productSnap = product as! FDataSnapshot
                     let data = productSnap.value
-                    print (data.objectForKey("name")!)
+                    
+                    let yakProduct = YAKProduct()
+                    yakProduct.img = data.objectForKey("img") as! String
+                    yakProduct.name = data.objectForKey("name") as! String
+                    yakProduct.category = data.objectForKey("category") as! String
+                    yakProduct.company = data.objectForKey("company") as! String
+                    yakProduct.distance = data.objectForKey("distance") as! String
+                    yakProduct.size = data.objectForKey("size") as! String
+                    yakProduct.price = data.objectForKey("price") as! String
+                    
+                    self.products.append(yakProduct)
                 }
             }
-//
             // Update the UI data fields
             
             // Update tableView
+            self.collectionView!.reloadData()
         })
 
         // Uncomment the following line to preserve selection between presentations
@@ -138,9 +147,9 @@ class StoreViewController: UICollectionViewController {
     // MARK: Debug functoins
     
     func populateCollection() {
-        let product1 = YAKProduct(img: "", name: "Shirt", category: "Shirt", price: "$85.00", size: "M", distance: "0.1mi")
-        let product2 = YAKProduct(img: "", name: "Blouse", category: "Shirt", price: "$25.00", size: "M", distance: "0.5mi")
-        let product3 = YAKProduct(img: "", name: "Pants", category: "Bottoms", price: "$135.00", size: "M", distance: "0.3mi")
+        let product1 = YAKProduct(img: "", name: "Shirt", company: "C", category: "Shirt", price: "$85.00", size: "M", distance: "0.1mi")
+        let product2 = YAKProduct(img: "", name: "Blouse", company: "C", category: "Shirt", price: "$25.00", size: "M", distance: "0.5mi")
+        let product3 = YAKProduct(img: "", name: "Pants", company: "C", category: "Bottoms", price: "$135.00", size: "M", distance: "0.3mi")
         
         self.products.append(product1)
         self.products.append(product2)
