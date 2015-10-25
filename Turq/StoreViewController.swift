@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SwiftyJSON
 
 private let reuseIdentifier = "StoreCell"
 
@@ -22,12 +23,22 @@ class StoreViewController: UICollectionViewController {
         
         self.populateCollection()
         
-        let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/")
+//        var item1: Dictionary     =  ["name": "Alan Turning", "item" : "Red Chair", "price": "100"]
+//        print(item1)
         
-        ref.observeEventType(.Value, andPreviousSiblingKeyWithBlock: { snapshot in
+        let ref = Firebase(url: "https://weatheringwillowz.firebaseio.com/shops")
+        
+        ref.observeEventType(FEventType.Value, withBlock: { snapshot in
             // Update the array for tableView
-            print(snapshot)
-            
+            for shop in snapshot.children {
+                let shopItems = shop as! FDataSnapshot
+                for product in shopItems.children {
+                    let productSnap = product as! FDataSnapshot
+                    let data = productSnap.value
+                    print (data.objectForKey("name")!)
+                }
+            }
+//
             // Update the UI data fields
             
             // Update tableView
