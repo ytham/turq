@@ -34,6 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // You can set the default here
 //        self.pePaymentProcessor.paymentMode = FDPreAuthorization; //FDPurchase; //FDPreAuthorization;
         
+        UITabBar.appearance().tintColor = YAKColors.turquoise
+        
+        
         self.pePaymentProcessor = FDInAppPaymentProcessor.init(apiKey: kApiKey, apiSecret: kApiSecret, merchantToken: kMerchantToken, merchantIdentifier: kApplePayMerchantId, environment: kEnvironment)
         self.pePaymentProcessor.paymentMode = FDPreAuthorization
         return true

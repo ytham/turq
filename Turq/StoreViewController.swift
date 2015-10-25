@@ -30,8 +30,16 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
         ref.observeEventType(FEventType.Value, withBlock: { snapshot in
             // Update the array for tableView
             self.products = YAKProductGetter.convertSnapshotToProductArray(snapshot, collectionView: self.collectionView!)
+
+            let flippedFilteredProducts: Array<YAKProduct> = self.products.filter() { (product: YAKProduct) -> Bool in
+                let match = product.company.rangeOfString(self.storeName!, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                return match != nil ? true : false
+            }
             
-            self.filteredProducts = []
+            for (var i = flippedFilteredProducts.count-1; i >= 0; i--) {
+                self.filteredProducts.append(flippedFilteredProducts[i])
+            }
+            
             // Update collectionView
 //            self.collectionView!.reloadData()
         })
@@ -55,7 +63,7 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
         if (segue.identifier == "StoreCollectionView") {
             let vc = segue.destinationViewController as! ProductViewController
             if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
-                vc.product = self.products[indexPath.row]
+                vc.product = self.filteredProducts[indexPath.row]
             }
         }
     }
@@ -70,26 +78,33 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         NSLog("Product count: " + String(products.count))
-        return self.products.count
+        return self.filteredProducts.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ProductCollectionViewCell
         
-        let yakProduct = products[indexPath.row] as YAKProduct
+        let yakProduct = self.filteredProducts[indexPath.row] as YAKProduct
         print(yakProduct.img)
         let url = NSURL(string: yakProduct.img)!
         let data = NSData(contentsOfURL: url)
         let image = UIImage(data: data!)
         print(image?.description)
-//        cell.backgroundView = UIImageView(image: image)
-        cell.img.image = image!
+        cell.backgroundView = UIImageView(image: image)
+        //        cell.img.image = image!
         cell.name.text = yakProduct.name
+        cell.name.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+        cell.name.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.name.layer.shadowOffset = CGSizeMake(0.0, 1.0)
+        cell.name.layer.shadowRadius = 1.0
+        cell.name.layer.shadowOpacity = 1.0
+        
         cell.price.text = yakProduct.price
-      
-        cell.layer.cornerRadius = 8.0
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
+        cell.price.backgroundColor = YAKColors.priceBG
+        
+        cell.layer.cornerRadius = 4.0
+        //        cell.layer.borderWidth = 1.0
+        //        cell.layer.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1).CGColor
         cell.layer.backgroundColor = UIColor.whiteColor().CGColor
         cell.layer.shadowColor = UIColor.blackColor().CGColor
         cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
@@ -111,10 +126,12 @@ class StoreViewController: UICollectionViewController, UITextFieldDelegate {
         
         reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
         
-        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 358, height: 30.00));
+        let txtField: UITextField = UITextField(frame: CGRect(x: 8, y: 10, width: 358, height: 30.00));
         txtField.borderStyle = .RoundedRect
         txtField.font = UIFont(name: "HelveticaNeue", size: 16)
         reusableView!.addSubview(txtField)
+        txtField.textColor = UIColor.lightGrayColor()
+        txtField.text = "Search"
         
         txtField.delegate = self
         txtField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)

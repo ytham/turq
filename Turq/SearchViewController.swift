@@ -56,7 +56,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         if (segue.identifier == "SearchCollectionView") {
             let vc = segue.destinationViewController as! ProductViewController
             if let indexPath = collectionView?.indexPathForCell(sender as! UICollectionViewCell) {
-                vc.product = self.filteredProducts[indexPath.row]
+                vc.product = self.products[indexPath.row]
             }
         }
     }
@@ -70,13 +70,13 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         NSLog("Product count: " + String(products.count))
-        return self.filteredProducts.count
+        return self.products.count
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SearchCollectionViewCell
         
-        let yakProduct = self.filteredProducts[indexPath.row] as YAKProduct
+        let yakProduct = self.products[indexPath.row] as YAKProduct
         print(yakProduct.img)
         let url = NSURL(string: yakProduct.img)!
         let data = NSData(contentsOfURL: url)
@@ -85,6 +85,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         cell.backgroundView = UIImageView(image: image)
 //        cell.img.image = image!
         cell.name.text = yakProduct.name
+        cell.name.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
         cell.name.layer.shadowColor = UIColor.blackColor().CGColor
         cell.name.layer.shadowOffset = CGSizeMake(0.0, 1.0)
         cell.name.layer.shadowRadius = 1.0
@@ -112,7 +113,7 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
         
         reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SearchHeader", forIndexPath: indexPath)
         
-        let txtField: UITextField = UITextField(frame: CGRect(x: 10, y: 10, width: 360, height: 30.00));
+        let txtField: UITextField = UITextField(frame: CGRect(x: 8, y: 10, width: 358, height: 30.00));
         txtField.borderStyle = .RoundedRect
         txtField.font = UIFont(name: "HelveticaNeue", size: 16)
         reusableView!.addSubview(txtField)
@@ -127,11 +128,11 @@ class SearchViewController: UICollectionViewController, UITextFieldDelegate {
     func textFieldDidChange(textField: UITextField) {
         let filterText = textField.text!
         print(filterText)
-        self.filteredProducts = self.products.filter() { (product: YAKProduct) -> Bool in
-            let match = product.name.rangeOfString(filterText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return match != nil ? true : false
-        }
-        self.collectionView!.reloadData()
+//        self.filteredProducts = self.products.filter() { (product: YAKProduct) -> Bool in
+//            let match = product.name.rangeOfString(filterText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+//            return match != nil ? true : false
+//        }
+//        self.collectionView!.reloadData()
     }
     
     

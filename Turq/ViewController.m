@@ -322,7 +322,7 @@
             pmtRqst.merchantCapabilities = FDMerchantCapability3DS;
             
             NSCharacterSet *chs = [NSCharacterSet characterSetWithCharactersInString:@"$£"];
-            NSString* amountToBePaid = [@"$1.00" stringByTrimmingCharactersInSet:chs];
+            NSString* amountToBePaid = [@"$129.95" stringByTrimmingCharactersInSet:chs];
             
             //NSString* amountToBePaid = [self.amountField.text stringByReplacingOccurrencesOfString:@"$" withString:@""];
             
@@ -358,7 +358,7 @@
             
             // Create a sample order with only one line item
             FDPaymentSummaryItem *item1 = [[FDPaymentSummaryItem alloc] init];
-            item1.label = @"Large Shoes";
+            item1.label = @"Black Puffer Raincoat";
             item1.amount = [NSDecimalNumber decimalNumberWithString:amountToBePaid];
             item1.type = FDPaymentSummaryItemTypePending;
             
@@ -366,7 +366,7 @@
             // The list line item must be the merchant's name and reflect the TOTAL amount being authorized
             // (including tax, shipping, other charges)
             FDPaymentSummaryItem *item2 = [[FDPaymentSummaryItem alloc] init];
-            item2.label = @"Mcc Test Mid";
+            item2.label = @"LOLAS";
             item2.amount = [NSDecimalNumber decimalNumberWithString:amountToBePaid];
             NSArray *itemArray = [NSArray arrayWithObjects: item1, item2, nil];
             pmtRqst.paymentSummaryItems = itemArray;

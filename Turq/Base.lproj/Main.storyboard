@@ -9,7 +9,7 @@
         <scene sceneID="RXu-lC-slZ">
             <objects>
                 <navigationController title="TURQ" id="uhv-S9-hO7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="NEARBY" image="nearbyicon.png" id="Vdu-Ij-gVP"/>
+                    <tabBarItem key="tabBarItem" title="NEARBY" image="icon_nearby" id="Vdu-Ij-gVP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KPX-ni-Hie">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +52,7 @@
                             <outlet property="delegate" destination="06w-4a-f3H" id="Jwz-6V-zZd"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="NEARBY" image="nearbyicon.png" id="sPp-C3-l5D"/>
+                    <tabBarItem key="tabBarItem" title="NEARBY" image="icon_nearby" id="sPp-C3-l5D"/>
                     <navigationItem key="navigationItem" id="lRW-wX-uba"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X49-ED-grQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,38 +87,44 @@
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="45" id="ceJ-cw-FDh"/>
-                                                <constraint firstAttribute="width" constant="159" id="hwE-ze-irK"/>
+                                                <constraint firstAttribute="width" constant="159" id="hwE-ze-irK">
+                                                    <variation key="widthClass=compact" constant="175"/>
+                                                </constraint>
                                             </constraints>
                                             <string key="text">Name
 Name</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNv-Ke-JMR">
                                             <rect key="frame" x="8" y="218" width="159" height="14.5"/>
                                             <animations/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="159" id="4Pg-gX-ZNn"/>
+                                                <constraint firstAttribute="width" constant="159" id="4Pg-gX-ZNn">
+                                                    <variation key="widthClass=compact" constant="65"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" constant="65" id="MGu-xD-wgR"/>
+                                                <constraint firstAttribute="height" constant="28" id="d9w-t4-4Av"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="MGu-xD-wgR"/>
+                                                    <exclude reference="d9w-t4-4Av"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="4Pg-gX-ZNn"/>
+                                                    <include reference="MGu-xD-wgR"/>
+                                                    <include reference="d9w-t4-4Av"/>
+                                                </mask>
+                                            </variation>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7b5-2o-fhX">
-                                            <rect key="frame" x="8" y="8" width="159" height="160"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WXH-Ys-OGy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="160"/>
-                                                    <animations/>
-                                                </imageView>
-                                            </subviews>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="159" id="Hao-5Y-z7C"/>
-                                                <constraint firstAttribute="height" constant="160" id="fmv-B0-Mpd"/>
-                                            </constraints>
-                                        </stackView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -126,15 +132,35 @@ Name</string>
                                 <animations/>
                                 <constraints>
                                     <constraint firstItem="UNv-Ke-JMR" firstAttribute="centerX" secondItem="NgG-Ti-suk" secondAttribute="centerX" id="3Fc-Pf-xhB"/>
-                                    <constraint firstItem="7b5-2o-fhX" firstAttribute="centerX" secondItem="NgG-Ti-suk" secondAttribute="centerX" id="Dfc-dQ-a0W"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="UNv-Ke-JMR" secondAttribute="trailing" constant="-8" id="GTA-pH-bNG"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="CKZ-Bv-dRD" secondAttribute="bottom" constant="-8" id="IHc-pp-6MV"/>
+                                    <constraint firstItem="UNv-Ke-JMR" firstAttribute="top" secondItem="NgG-Ti-suk" secondAttribute="topMargin" constant="-8" id="Jrg-3C-Paw"/>
                                     <constraint firstItem="CKZ-Bv-dRD" firstAttribute="centerX" secondItem="NgG-Ti-suk" secondAttribute="centerX" id="Rwp-Jy-CeL"/>
-                                    <constraint firstItem="CKZ-Bv-dRD" firstAttribute="top" secondItem="7b5-2o-fhX" secondAttribute="bottom" constant="5" id="ghy-ac-YB4"/>
-                                    <constraint firstItem="7b5-2o-fhX" firstAttribute="top" secondItem="NgG-Ti-suk" secondAttribute="topMargin" id="xea-Nb-HAL"/>
+                                    <constraint firstItem="UNv-Ke-JMR" firstAttribute="trailing" secondItem="NgG-Ti-suk" secondAttribute="trailingMargin" id="dl3-gt-Ead">
+                                        <variation key="widthClass=compact" constant="-8"/>
+                                    </constraint>
                                     <constraint firstItem="UNv-Ke-JMR" firstAttribute="top" secondItem="CKZ-Bv-dRD" secondAttribute="bottom" id="y6W-hz-esi"/>
                                 </constraints>
                                 <size key="customSize" width="175" height="238"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IHc-pp-6MV"/>
+                                        <exclude reference="GTA-pH-bNG"/>
+                                        <exclude reference="Jrg-3C-Paw"/>
+                                        <exclude reference="dl3-gt-Ead"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="IHc-pp-6MV"/>
+                                        <exclude reference="3Fc-Pf-xhB"/>
+                                        <include reference="GTA-pH-bNG"/>
+                                        <include reference="Jrg-3C-Paw"/>
+                                        <exclude reference="dl3-gt-Ead"/>
+                                        <exclude reference="y6W-hz-esi"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <outlet property="img" destination="WXH-Ys-OGy" id="G1v-Z2-Rd0"/>
                                     <outlet property="name" destination="CKZ-Bv-dRD" id="Zae-HY-72H"/>
                                     <outlet property="price" destination="UNv-Ke-JMR" id="B91-BB-VIO"/>
                                     <segue destination="oE0-LQ-itD" kind="show" identifier="StoreCollectionView" id="O3z-Xv-Sdz"/>
@@ -351,7 +377,7 @@ ProductName</string>
         <scene sceneID="f10-vu-Hs5">
             <objects>
                 <navigationController title="DEALS" id="GOc-vq-v7M" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DEALS" image="dealsicon.png" id="xYl-EQ-Mb6"/>
+                    <tabBarItem key="tabBarItem" title="DEALS" image="icon_deals" id="xYl-EQ-Mb6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0QZ-p0-0hL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -379,8 +405,8 @@ ProductName</string>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="DEALS" image="dealsicon.png" id="cPa-gy-q4n"/>
-                    <navigationItem key="navigationItem" id="sLe-hc-AB3"/>
+                    <tabBarItem key="tabBarItem" title="DEALS" image="icon_deals" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="DEALS" id="sLe-hc-AB3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,7 +416,7 @@ ProductName</string>
         <scene sceneID="hQQ-qb-nXK">
             <objects>
                 <navigationController title="CART" id="MhB-u8-pZK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="CART" image="carticon.png" id="nSo-s6-FV8"/>
+                    <tabBarItem key="tabBarItem" title="CART" image="icon_cart" id="nSo-s6-FV8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7dL-zo-vVf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -408,7 +434,7 @@ ProductName</string>
         <scene sceneID="oFE-mr-x4h">
             <objects>
                 <navigationController id="8Lf-cW-hsE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="profileicon.png" id="rHY-oL-PXx"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="icon_profile" id="rHY-oL-PXx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="15a-uh-0MI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -448,8 +474,8 @@ ProductName</string>
                             <outlet property="delegate" destination="5Vg-FA-QPI" id="nLB-dq-ty7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="CART" image="carticon.png" id="Mj5-la-IH4"/>
-                    <navigationItem key="navigationItem" id="VR3-p2-lPO"/>
+                    <tabBarItem key="tabBarItem" title="CART" image="icon_cart" id="Mj5-la-IH4"/>
+                    <navigationItem key="navigationItem" title="CART" id="VR3-p2-lPO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8U-Dd-6cZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -469,8 +495,8 @@ ProductName</string>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="profileicon.png" id="HgY-ea-24P"/>
-                    <navigationItem key="navigationItem" id="VL2-Ej-N4r"/>
+                    <tabBarItem key="tabBarItem" title="PROFILE" image="icon_profile" id="HgY-ea-24P"/>
+                    <navigationItem key="navigationItem" title="PROFILE" id="VL2-Ej-N4r"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAz-rK-C67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -480,7 +506,7 @@ ProductName</string>
         <scene sceneID="zy6-1c-6Mg">
             <objects>
                 <navigationController title="SEARCH" id="5i7-fy-a7U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SEARCH" image="searchicon.png" id="FQ6-4N-R8W"/>
+                    <tabBarItem key="tabBarItem" title="SEARCH" image="icon_search" id="FQ6-4N-R8W"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYp-W5-Dsd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -521,7 +547,9 @@ ProductName</string>
                                             <rect key="frame" x="8" y="193" width="159" height="45"/>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="159" id="ghv-kF-yiR"/>
+                                                <constraint firstAttribute="width" constant="159" id="ghv-kF-yiR">
+                                                    <variation key="widthClass=compact" constant="175"/>
+                                                </constraint>
                                                 <constraint firstAttribute="height" constant="45" id="jvN-eB-5F1"/>
                                             </constraints>
                                             <string key="text">Name
@@ -578,8 +606,8 @@ Name</string>
                             <outlet property="delegate" destination="XnZ-Bz-NjY" id="jVy-Lk-oAP"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="SEARCH" image="searchicon.png" id="fIl-mg-Mlf"/>
-                    <navigationItem key="navigationItem" id="fgc-NO-iBh"/>
+                    <tabBarItem key="tabBarItem" title="SEARCH" image="icon_search" id="fIl-mg-Mlf"/>
+                    <navigationItem key="navigationItem" title="SEARCH" id="fgc-NO-iBh"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Paz-Lj-alA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -701,13 +729,13 @@ Name</string>
         </scene>
     </scenes>
     <resources>
-        <image name="carticon.png" width="30" height="30"/>
-        <image name="dealsicon.png" width="30" height="30"/>
-        <image name="nearbyicon.png" width="30" height="30"/>
-        <image name="profileicon.png" width="30" height="30"/>
-        <image name="searchicon.png" width="30" height="30"/>
+        <image name="icon_cart" width="30" height="30"/>
+        <image name="icon_deals" width="30" height="30"/>
+        <image name="icon_nearby" width="30" height="30"/>
+        <image name="icon_profile" width="30" height="30"/>
+        <image name="icon_search" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oze-qd-klA"/>
+        <segue reference="O3z-Xv-Sdz"/>
     </inferredMetricsTieBreakers>
 </document>
