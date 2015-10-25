@@ -3,3 +3,5 @@
 //
 
 #import <Firebase/Firebase.h>
+#import <InAppSDK/InAppSDK.h>
+#import "ViewController.h"

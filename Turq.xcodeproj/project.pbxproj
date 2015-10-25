@@ -11,6 +11,7 @@
 		72C4500F1BDCABFF00A3F5D4 /* InAppSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4500D1BDCABFF00A3F5D4 /* InAppSDK.framework */; settings = {ASSET_TAGS = (); }; };
 		72C450101BDCABFF00A3F5D4 /* PayeezyClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C4500E1BDCABFF00A3F5D4 /* PayeezyClient.framework */; settings = {ASSET_TAGS = (); }; };
 		72C450121BDCAD5B00A3F5D4 /* AppleUKTester.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 72C450111BDCAD5B00A3F5D4 /* AppleUKTester.entitlements */; settings = {ASSET_TAGS = (); }; };
+		72C450151BDD0CAD00A3F5D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C450141BDD0CAD00A3F5D4 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
 		A653F26C1BDC3496001014B4 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = A653F26B1BDC3496001014B4 /* Assets */; settings = {ASSET_TAGS = (); }; };
 		A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26D1BDC4E9A001014B4 /* YAKColors.swift */; settings = {ASSET_TAGS = (); }; };
 		A653F2701BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653F26F1BDC5275001014B4 /* CollectionViewDelegateFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
@@ -57,6 +58,8 @@
 		72C4500D1BDCABFF00A3F5D4 /* InAppSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InAppSDK.framework; sourceTree = "<group>"; };
 		72C4500E1BDCABFF00A3F5D4 /* PayeezyClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PayeezyClient.framework; sourceTree = "<group>"; };
 		72C450111BDCAD5B00A3F5D4 /* AppleUKTester.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppleUKTester.entitlements; sourceTree = "<group>"; };
+		72C450131BDD0CAD00A3F5D4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		72C450141BDD0CAD00A3F5D4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B5243CC10E27B73DBE10267 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A653F2681BDC2762001014B4 /* Turq-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Turq-Bridging-Header.h"; sourceTree = "<group>"; };
 		A653F26B1BDC3496001014B4 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = SOURCE_ROOT; };
@@ -161,6 +164,8 @@
 		A6FFCEB11BDBF07B000C8F7B /* Turq */ = {
 			isa = PBXGroup;
 			children = (
+				72C450131BDD0CAD00A3F5D4 /* ViewController.h */,
+				72C450141BDD0CAD00A3F5D4 /* ViewController.m */,
 				A6FFCEB21BDBF07C000C8F7B /* AppDelegate.swift */,
 				A653F26D1BDC4E9A001014B4 /* YAKColors.swift */,
 				A6FFCEF21BDC1D37000C8F7B /* YAKStores.swift */,
@@ -399,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C450151BDD0CAD00A3F5D4 /* ViewController.m in Sources */,
 				A653F26E1BDC4E9A001014B4 /* YAKColors.swift in Sources */,
 				A6FFCEEB1BDC00BB000C8F7B /* ProfileViewController.swift in Sources */,
 				A6FFCEF31BDC1D37000C8F7B /* YAKStores.swift in Sources */,
